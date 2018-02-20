@@ -2,3 +2,5 @@
   * fix performance(hash table)
 * 3_longest-substring-without-repeating-characters
   * read solution
+* 7_reverse-integer
+  * fix performance
