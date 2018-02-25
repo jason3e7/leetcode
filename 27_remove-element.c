@@ -3,27 +3,19 @@
   * @author Jason3e7
   * @algorithm in-place
   * @date 201802260816
+  * @note why fast !? no ! QQ 
   */
 
 #include <stdio.h>
 
 int removeElement(int* nums, int numsSize, int val) {
-	int i, j = numsSize - 1, temp;
-	for(i = 0; i <= j; i++) {
+	int count = 0, i;
+	for(i = 0; i < numsSize; i++) {
 		if(nums[i] != val) {
-			continue;
+			nums[count++] = nums[i];
 		}
-		while(nums[j] == val) {
-			if(i == j) {
-				return i;
-			}
-			j--;
-		}
-		temp = nums[i];
-		nums[i] = nums[j];
-		nums[j] = temp;
 	}
-	return i; 
+	return count; 
 }
 
 int main() {
