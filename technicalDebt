@@ -10,6 +10,8 @@ the result not same !
   * fix performance
 * 13_roman-to-integer
   * fix performance
+* 53_maximum-subarray
+  * divide and conquer
 * 70_climbing-stairs
   * fix code
 * 136_single-number
