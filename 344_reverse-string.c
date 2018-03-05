@@ -9,13 +9,13 @@
 #include <string.h>
 
 char* reverseString(char* s) {
-    int i, len = strlen(s);
-	int  mid = len / 2, end = len - 1;
+    int l = 0, r = strlen(s) - 1;
 	char tmp;
-	for(i = 0; i < mid; i++) {
-		tmp = s[i];
-		s[i] = s[end - i];
-		s[end - i] = tmp;
+	while(l < r) {
+		tmp = s[l];
+		s[l] = s[r];
+		s[r] = tmp;
+		l++, r--;
 	}
 	return s;
 }
