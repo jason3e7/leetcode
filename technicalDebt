@@ -18,5 +18,9 @@ the result not same !
   * c dynamically growing array
   * c hashtable
   * math solution
+* 189_rotate-array
+  * using extra array 
+  * cyclic replacements
+  * reverse
 * 771_jewels-and-stones
   * fix performance
