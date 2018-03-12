@@ -22,5 +22,8 @@ the result not same !
   * using extra array 
   * cyclic replacements
   * reverse
+* 202_happy-number
+  * two point slow and fast
+  * math(unhappy number in 4 loop WHY?)
 * 771_jewels-and-stones
   * fix performance
