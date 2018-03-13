@@ -3,16 +3,13 @@
   * @author Jason3e7
   * @algorithm math
   * @date 201803141123
+  * @note https://www.wikiwand.com/en/Digital_root#/Congruence_formula
   */
 
 #include <stdio.h>
 
 int addDigits(int num) {
-	if(num == 0) {
-		return 0;
-	}
-	int n = num % 9;
-	return n ? n : 9;   
+	return (num - 1) % 9 + 1;   
 }
 
 int main() {
