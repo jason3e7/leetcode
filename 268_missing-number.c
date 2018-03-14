@@ -3,6 +3,7 @@
   * @author Jason3e7
   * @algorithm math
   * @date 201803151059
+  * @note a ^ 0 = a, a ^ b ^ b = a
   */
 
 #include <stdio.h>
@@ -11,9 +12,9 @@ int missingNumber(int* nums, int numsSize) {
 	if(numsSize <= 0) {
 		return 0;
 	}
-	int i, ans = ((1 + numsSize) * numsSize) / 2;
+	int i, ans = numsSize;
 	for(i = 0; i < numsSize; i++) {
-		ans -= nums[i];
+		ans = (ans ^ i ^ nums[i]);
 	}
 	return ans;
 }
