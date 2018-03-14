@@ -11,11 +11,11 @@ int missingNumber(int* nums, int numsSize) {
 	if(numsSize <= 0) {
 		return 0;
 	}
-	int i, sum = 0;
+	int i, ans = ((1 + numsSize) * numsSize) / 2;
 	for(i = 0; i < numsSize; i++) {
-		sum += nums[i];
+		ans -= nums[i];
 	}
-	return ((1 + numsSize) * numsSize) / 2 - sum;
+	return ans;
 }
 
 int main() {
