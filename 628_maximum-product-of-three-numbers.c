@@ -11,7 +11,7 @@ int maximumProduct(int* nums, int numsSize) {
 	if(numsSize == 3) {
 		return nums[0] * nums[1] * nums[2];
 	}
- 	int i, max[3] = {0}, ne[2] = {0};
+ 	int i, max[3] = {0}, min[2] = {0}, ans[2];
 	for(i = 0; i < numsSize; i++) {
 		if(nums[i] > max[0]) {
 			max[2] = max[1];
@@ -23,19 +23,19 @@ int maximumProduct(int* nums, int numsSize) {
 		} else if(nums[i] > max[2]) {
 			max[2] = nums[i];
 		}
-		if(nums[i] < ne[0]) {
-			ne[1] = ne[0];
-			ne[0] = nums[i];
-		} else if(nums[i] < ne[1]) {
-			ne[1] = nums[i];
+		if(nums[i] < min[0]) {
+			min[1] = min[0];
+			min[0] = nums[i];
+		} else if(nums[i] < min[1]) {
+			min[1] = nums[i];
 		}
 	}   
-	max[1] = max[0] * max[1] * max[2];
-	max[2] = max[0] * ne[0] * ne[1];
-	if(max[1] > max[2]) {
-		return max[1];
+	ans[0] = max[0] * max[1] * max[2];
+	ans[1] = max[0] * min[0] * min[1];
+	if(ans[0] > ans[1]) {
+		return ans[0];
 	}
-	return max[2];
+	return ans[1];
 }
 
 int main() {
