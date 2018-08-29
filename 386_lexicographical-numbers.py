@@ -1,31 +1,26 @@
 #!/usr/bin/python3
-#dfs
 
 class Solution:
-  output = []
-  maxN = 0
   def lexicalOrder(self, n):
-    self.output = []
-    self.maxN = n
-    for i in range(1, 10) :
-      self.dfs(i)
-    return self.output
-  def dfs(self, base) :
-    if(base > self.maxN) :
-      return False
-    self.output.append(base)
-    carry = base * 10
-    if(carry <= self.maxN) :
-      self.dfs(carry)
-
-    if(base < 10) :
-      return False
-    if(base + 1 <= self.maxN and base % 10 != 9) :
-      self.dfs(base + 1)
+    output = []
+    number = 1
+    for i in range(n) :
+      output.append(number)
+      if(number * 10 <= n) :
+        number *= 10
+      elif(number % 10 != 9 and (number + 1) <= n) :
+        number += 1 
+      else :
+        if((number + 1) > n) : 
+          number = int(number / 10)
+        while(number % 10 == 9) :
+          number = int((number - 9) / 10)
+        number += 1
+    return output
 
 func = Solution().lexicalOrder
 print(func(1))
-print(func(10))
+print(func(34))
 print(func(50))
 print(func(200))
 print(func(300))
