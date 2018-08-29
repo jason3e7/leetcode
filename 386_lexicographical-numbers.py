@@ -1,53 +1,27 @@
 #!/usr/bin/python3
-#leetcode 380000
+#dfs
 
 class Solution:
+  output = []
+  maxN = 0
   def lexicalOrder(self, n):
-    length = len(str(n))
-    num = ['1', '0', '0', '0', '0', '0', '0']
-    nLen = 1
-    nLocate = 0
-    output = [] 
-    while (ord(num[0]) < 58) :
-      getNum = self.str2int(num[0:nLen])
-      if(n >= getNum) :
-        output.append(getNum)
-      else :
-        # carry
-        if(nLocate == 0) :
-          break
-        num[nLocate] = '0'
-        nLen -= 1
-        nLocate -= 1 
-        num[nLocate] = chr(ord(num[nLocate]) + 1)
-        # carry
-        for i in [6, 5, 4, 3, 2, 1] :
-          if(ord(num[i]) >= 58) :
-            num[i] = '0'
-            nLen -= 1
-            nLocate -= 1
-            num[i - 1] = chr(ord(num[i - 1]) + 1)
-        continue
-      if(nLen < length) :
-        nLen += 1
-        nLocate += 1
-        continue
-      if(nLen == length) :
-        num[nLocate] = chr(ord(num[nLocate]) + 1)
-        # carry
-        for i in [6, 5, 4, 3, 2, 1] :
-          if(ord(num[i]) >= 58) :
-            num[i] = '0'
-            nLen -= 1
-            nLocate -= 1
-            num[i - 1] = chr(ord(num[i - 1]) + 1)
-    return output
-  def str2int(self, sList) :
-    num = 0
-    for c in sList :
-      num *= 10
-      num += int(c)
-    return num
+    self.output = []
+    self.maxN = n
+    for i in range(1, 10) :
+      self.dfs(i)
+    return self.output
+  def dfs(self, base) :
+    if(base > self.maxN) :
+      return False
+    self.output.append(base)
+    carry = base * 10
+    if(carry <= self.maxN) :
+      self.dfs(carry)
+
+    if(base < 10) :
+      return False
+    if(base + 1 <= self.maxN and base % 10 != 9) :
+      self.dfs(base + 1)
 
 func = Solution().lexicalOrder
 print(func(1))
@@ -57,3 +31,5 @@ print(func(200))
 print(func(300))
 print(func(3000))
 print(func(50000))
+print(func(5000000))
+
