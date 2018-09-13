@@ -10,26 +10,16 @@
 
 int countBinarySubstrings(char* s) {
 	int i, len = strlen(s), output = 0;
-	int zeroC = 0, oneC = 0, now = -1;
-	for(i = 0; i < len; i++) {
-		if(s[i] == '0') {
-			if(now == 1) {
-				output += (zeroC < oneC) ? zeroC : oneC;
-				zeroC = 0;
-			} 
-			now = 0;
-			zeroC++;
+	int prev = 0, cur = 1;
+	for(i = 1; i < len; i++) {
+		if(s[i - 1] != s[i]) {
+			output += (prev < cur) ? prev : cur;
+			prev = cur;
+			cur = 0; 
 		} 
-		if(s[i] == '1') {
-			if(now == 0) {
-				output += (zeroC < oneC) ? zeroC : oneC;
-				oneC = 0;
-			} 
-			now = 1;
-			oneC++;
-		}
+		cur++;
 	}
-	output += (zeroC < oneC) ? zeroC : oneC;
+	output += (prev < cur) ? prev : cur;
 	return output;
 }
 
