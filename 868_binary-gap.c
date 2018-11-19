@@ -8,23 +8,17 @@
 #include <stdio.h>
 
 int binaryGap(int N) {
-	int largest = 0, flag = 0, count = 1;
-	while(N > 0) {
+	int largest = 0, i, last = -1, temp;
+	for(i = 0; N > 0; N /= 2, i++) {	
 		if(N % 2 == 1) {
-			if(flag == 1) {
-				if(count > largest) {
-					largest = count;
+			if(last != -1) {
+				temp = i - last;
+				if(temp > largest) {
+					largest = temp;
 				}
-				count = 1;
-			} else {
-				flag = 1;
 			}
-		} else {
-			if(flag == 1) {
-				count++;
-			}
+			last = i;
 		}
-		N /= 2;
 	}
 	return largest;
 }
