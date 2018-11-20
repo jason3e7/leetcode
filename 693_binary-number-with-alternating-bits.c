@@ -9,25 +9,17 @@
 #include <stdbool.h>
 
 bool hasAlternatingBits(int n) {
-    int flag = 1, last = -1, prev;
+    int last = -1, prev;
 	while(n > 0) {
 		prev = n % 2;
-		if(last == -1) {
-			last = prev;
+		if(last == prev) {
+			return false;
 		} else {
-			if(last == prev) {
-				flag = 0;
-				break;
-			} else {
-				last = prev;
-			}
+			last = prev;
 		}
 		n /= 2;
 	}
-	if(flag == 1) {
-		return true;
-	}
-	return false;
+	return true;
 }
 
 int main() {
