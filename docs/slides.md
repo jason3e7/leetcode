@@ -11,4 +11,13 @@ jason3e7 20181126
 
 ---
 
+# Array
+* [896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)
+
+---
+
+# String
+
+---
+
 # The End
