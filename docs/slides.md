@@ -2,12 +2,17 @@
 # leetcode 
 ### 就上手
 
-jason3e7 20181129
+jason3e7 20181130
 
 ---
 
 # basic 
 * [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+
+---
+
+# basic binary
+* [461. Hamming Distance](https://leetcode.com/problems/hamming-distance/)
 
 ---
 
