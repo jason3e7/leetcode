@@ -6,24 +6,20 @@
   */
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int distributeCandies(int* candies, int candiesSize) {
-	int exist[5000] = {0}, count = 0, max = (candiesSize / 2);
-	int i, j, flag;
+	bool exist[200001] = {0}; 
+	int max = (candiesSize / 2), offset;
+	int i, count = 0;
 	for(i = 0; i < candiesSize; i++) {
-		flag = 1;
-		for(j = 0; j < count; j++) {
-			if(candies[i] == exist[j]) {
-				flag = 0;
-				break;
-			}
+		offset = candies[i] + 100000;
+		if(exist[offset] == 0) {
+			count++;
+			exist[offset] = 1;
 		}
-		if(flag == 1) {
-			exist[count] = candies[i];
-			count++;	
-			if(count == max) {
-				break;
-			}
+		if(count == max) {
+			break;
 		}
 	}
 	return count;
