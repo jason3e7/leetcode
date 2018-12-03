@@ -2,12 +2,13 @@
 # leetcode 
 ### 就上手
 
-jason3e7 20181130
+jason3e7 20181203
 
 ---
 
 # basic 
 * [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+* [575. Distribute Candies](https://leetcode.com/problems/distribute-candies/)
 
 ---
 
