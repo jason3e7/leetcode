@@ -2,7 +2,7 @@
   * @file 575_distribute-candies
   * @author Jason3e7
   * @algorithm math
-  * @date 2018120311130
+  * @date 201812031130
   */
 
 #include <stdio.h>
