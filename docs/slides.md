@@ -2,7 +2,7 @@
 # leetcode 
 ### 就上手
 
-jason3e7 20181204
+jason3e7 20181207
 
 ---
 
@@ -10,6 +10,7 @@ jason3e7 20181204
 * [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
 * [575. Distribute Candies](https://leetcode.com/problems/distribute-candies/)
 * [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
+* [788. Rotated Digits](https://leetcode.com/problems/rotated-digits/)
 
 ---
 
