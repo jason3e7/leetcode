@@ -6,22 +6,23 @@
   */
 
 #include <stdio.h>
+#define length 5
 
 int rotatedDigits(int N) {
 	int nFlag[10] = {0, 0, 1, -1, -1, 1, 1, -1, 0, 1};
 	int dMap[10] = {1, 2, 2, 2, 2, 2, 2, 2, 3, 3};
 	int zMap[10] = {0, 0, 1, 1, 1, 2, 3, 3, 3, 4};
 
-	int i, base = 3, dCount[5] = {0}, zCount[5] = {0};
+	int i, base = 3, dCount[length] = {0}, zCount[length] = {0};
 	dCount[1] = 4;
 	zCount[1] = 7;
-	for(i = 2; i <= 4; i++) {
+	for(i = 2; i < length; i++) {
 		dCount[i] = (dCount[i - 1] * 7) + (4 * base);
 		base *= 3;
 		zCount[i] = (zCount[i - 1] * 7);
 	}
 
-	int point = 0, digit[5] = {0}; 
+	int point = 0, digit[length] = {0}; 
 	while(N > 0) {
 		digit[point] = N % 10;
 		point++;
