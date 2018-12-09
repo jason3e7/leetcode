@@ -2,7 +2,7 @@
 # leetcode 
 ### 就上手
 
-jason3e7 20181207
+jason3e7 20181209
 
 ---
 
@@ -27,6 +27,7 @@ jason3e7 20181207
 
 # basic string
 * [657. Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/)
+* [520. Detect Capital](https://leetcode.com/problems/detect-capital/)
 
 ---
 

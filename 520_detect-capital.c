@@ -10,28 +10,27 @@
 #include <stdbool.h>
 
 bool detectCapitalUse(char* word) {
-	int i, len = strlen(word), type = 0;
+	int i, len = strlen(word);
+	char begin, end;
 	if(len <= 1) {
 		return true;
 	}
 	if('a' <= word[0] && word[0] <= 'z') {
-		type = 1;
+		begin = 'a';
+		end = 'z';
 	} else if('A' <= word[0] && word[0] <= 'Z') {
 		if('a' <= word[1] && word[1] <= 'z') {
-			type = 2;
+			begin = 'a';
+			end = 'z';
 		} else if('A' <= word[1] && word[1] <= 'Z') {
-			type = 3;
+			begin = 'A';
+			end = 'Z';
 		}
 	}
+
 	for(i = 1; i < len; i++) {
-		if(type == 1 || type == 2) {
-			if('A' <= word[i] && word[i] <= 'Z') {
-				return false;
-			}
-		} else if(type == 3) {
-			if('a' <= word[i] && word[i] <= 'z') {
-				return false;
-			}
+		if(!(begin <= word[i] && word[i] <= end)) {
+			return false;
 		}
 	}
 	return true;
@@ -42,5 +41,6 @@ int main() {
 	printf("%d\n", detectCapitalUse("FlaG"));	
 	printf("%d\n", detectCapitalUse("leetcode"));	
 	printf("%d\n", detectCapitalUse("Google"));	
+	printf("%d\n", detectCapitalUse("mL"));	
 	return 0;
 }
