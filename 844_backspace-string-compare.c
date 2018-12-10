@@ -10,41 +10,51 @@
 #include <stdbool.h>
 
 bool backspaceCompare(char* S, char* T) {
-	int i;
-	int sLen = strlen(S), sPoint = 0;
-	for(i = 0; i < sLen; i++) {
-		if(S[i] == '#') {
+	int sPoint = strlen(S) - 1, sCount = 0, tPoint = strlen(T) - 1, tCount = 0;
+	while(sPoint >= 0 || tPoint >= 0) {	
+		while(S[sPoint] == '#' || sCount > 0) {
+			if(S[sPoint] == '#') {
+				sCount++;
+			} else if('a' <= S[sPoint] && S[sPoint] <= 'z') {
+				sCount--;
+			} 
 			sPoint--;
 			if(sPoint < 0) {
-				S[0] = ' ';
 				sPoint = 0;
+				S[sPoint] = ' ';
+				break;
 			}
-			continue;
-		} else if('a' <= S[i] && S[i] <= 'z') {
-			S[sPoint] = S[i];
-			sPoint++;
 		}
-	}
-	int tLen = strlen(T), tPoint = 0;
-	for(i = 0; i < tLen; i++) {
-		if(T[i] == '#') {
+		while(T[tPoint] == '#' || tCount > 0) {
+			if(T[tPoint] == '#') {
+				tCount++;
+			} else if('a' <= T[tPoint] && T[tPoint] <= 'z') {
+				tCount--;
+			} 
 			tPoint--;
 			if(tPoint < 0) {
-				T[0] = ' ';
 				tPoint = 0;
+				T[tPoint] = ' ';
+				break;
 			}
-			continue;
-		} else if('a' <= T[i] && T[i] <= 'z') {
-			T[tPoint] = T[i];
-			tPoint++;
 		}
-	}
-	if(sPoint != tPoint) {
-		return false;
-	}
-	for(i = 0; i < sPoint; i++) {
-		if(S[i] != T[i]) {
+		if(S[sPoint] != T[tPoint]) {
 			return false;
+		}
+		if(sPoint == 0 || tPoint == 0) {
+			if(sPoint == tPoint) {
+				break;
+			}
+		}
+		sPoint--;
+		if(sPoint < 0) {
+			sPoint = 0;
+			S[sPoint] = ' ';
+		}
+		tPoint--;
+		if(tPoint < 0) {
+			tPoint = 0;
+			T[sPoint] = ' ';
 		}
 	}
 	return true;
@@ -63,5 +73,8 @@ int main() {
 	char text7[] = "a#c";
 	char text8[] = "b";
 	printf("%d\n", backspaceCompare(text7, text8));	
+	char text9[] = "#a";
+	char text10[] = "a";
+	printf("%d\n", backspaceCompare(text9, text10));	
 	return 0;
 }
