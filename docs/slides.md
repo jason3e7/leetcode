@@ -1,13 +1,14 @@
 ### 第一次刷 
-# leetcode 
+# [leetcode](https://leetcode.com/)
 ### 就上手
 
-jason3e7 20181210
+jason3e7 20181216
 
 ---
 
 # basic 
 * [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+* [263. Ugly Number](https://leetcode.com/problems/ugly-number/)
 * [575. Distribute Candies](https://leetcode.com/problems/distribute-candies/)
 * [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
 * [788. Rotated Digits](https://leetcode.com/problems/rotated-digits/)
