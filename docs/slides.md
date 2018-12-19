@@ -2,12 +2,13 @@
 # [leetcode](https://leetcode.com/)
 ### 就上手
 
-jason3e7 20181216
+jason3e7 20181219
 
 ---
 
 # basic 
 * [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+* [441. Arranging Coins](https://leetcode.com/problems/arranging-coins/)
 * [263. Ugly Number](https://leetcode.com/problems/ugly-number/)
 * [575. Distribute Candies](https://leetcode.com/problems/distribute-candies/)
 * [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
@@ -21,6 +22,7 @@ jason3e7 20181216
 ---
 
 # basic array
+* [724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
 * [896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)
 * [914. X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/), memory.
 
