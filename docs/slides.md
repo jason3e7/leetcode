@@ -2,7 +2,7 @@
 # [leetcode](https://leetcode.com/)
 ### 就上手
 
-jason3e7 20181219
+jason3e7 20181220
 
 ---
 
@@ -37,6 +37,11 @@ jason3e7 20181219
 
 # basic DP
 * [198. House Robber](https://leetcode.com/problems/house-robber/)
+
+---
+
+# basic math
+* [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
 
 ---
 
