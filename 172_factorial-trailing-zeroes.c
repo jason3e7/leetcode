@@ -3,32 +3,24 @@
   * @author Jason3e7
   * @algorithm math
   * @date 201812201212
+  * @note alway twcCount > fiveCount
   */
 
 #include <stdio.h>
 
 int trailingZeroes(int n) {
-	int twoC = 0, fiveC = 0;
-	int temp;
-	temp = n;
-	while(temp != 0) {
-		temp /= 2;
-		twoC += temp;
+	int count = 0;
+	while(n != 0) {
+		n /= 5;
+		count += n;
 	}
-	temp = n;
-	while(temp != 0) {
-		temp /= 5;
-		fiveC += temp;
-	}
-	if(twoC < fiveC) {
-		return twoC;
-	}
-	return fiveC;
+	return count;
 }
 
 int main() {
-	printf("%d\n", trailingZeroes(3));	
-	printf("%d\n", trailingZeroes(5));	
+	printf("%d 0\n", trailingZeroes(3));	
+	printf("%d 1\n", trailingZeroes(5));	
 	printf("%d 24999\n", trailingZeroes(100000));	
+	printf("%d 536870902\n", trailingZeroes(2147483647));	
 	return 0;
 }
