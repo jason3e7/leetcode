@@ -9,17 +9,16 @@
 
 int trailingZeroes(int n) {
 	int twoC = 0, fiveC = 0;
-	int i, temp;
-	for(i = 2; i <= n; i++) {
-		temp = i;
-		while(temp != 0 && temp % 2 == 0) {
-			twoC++;
-			temp /= 2;
-		}
-		while(temp != 0 && temp % 5 == 0) {
-			fiveC++;
-			temp /= 5;
-		}
+	int temp;
+	temp = n;
+	while(temp != 0) {
+		temp /= 2;
+		twoC += temp;
+	}
+	temp = n;
+	while(temp != 0) {
+		temp /= 5;
+		fiveC += temp;
 	}
 	if(twoC < fiveC) {
 		return twoC;
@@ -30,6 +29,6 @@ int trailingZeroes(int n) {
 int main() {
 	printf("%d\n", trailingZeroes(3));	
 	printf("%d\n", trailingZeroes(5));	
-	printf("%d\n", trailingZeroes(100000));	
+	printf("%d 24999\n", trailingZeroes(100000));	
 	return 0;
 }
