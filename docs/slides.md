@@ -43,6 +43,7 @@ jason3e7 20181220
 
 # basic math
 * [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
+* [754. Reach a Number](https://leetcode.com/problems/reach-a-number/)
 
 ---
 
