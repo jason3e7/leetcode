@@ -12,9 +12,10 @@ bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
 	if(n <= 0) {
 		return true;
 	}
-    int i, count = 0;
+    int i;
 	for(i = 0; i < flowerbedSize; i++) {
 		if(flowerbed[i] == 1) {
+			i++;
 			continue;
 		}
 		if(i > 0) {
@@ -28,8 +29,8 @@ bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
 			}
 		} 
 		flowerbed[i] = 1;
-		count++;
-		if(count >= n) {
+		n--;
+		if(n <= 0) {
 			return true;
 		}
 	}
