@@ -22,6 +22,7 @@ jason3e7 20181220
 ---
 
 # basic array
+* [605. Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)
 * [724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
 * [896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)
 * [914. X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/), memory.
