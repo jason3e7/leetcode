@@ -1,7 +1,7 @@
  /*
   * @file 961_n-repeated-element-in-size-2n-array
   * @author Jason3e7
-  * @algorithm array
+  * @algorithm array, hashMap
   * @date 201812261014
   */
 
@@ -11,14 +11,11 @@ int repeatedNTimes(int* A, int ASize) {
     int count[10000] = {0};
 	int i, output;
 	for(i = 0; i < ASize; i++) {
+		if(count[A[i]] != 0) {
+			output = A[i];
+			break;	
+		}
 		count[A[i]]++;
-	}
-	ASize /= 2;
-	for(i = 0; i < 10000; i++) {
-		if(count[i] == ASize) {
-			output = i;
-			break;
-		}  
 	}
 	return output;
 }
