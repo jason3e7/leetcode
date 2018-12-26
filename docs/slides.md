@@ -2,7 +2,7 @@
 # [leetcode](https://leetcode.com/)
 ### 就上手
 
-jason3e7 20181220
+jason3e7 20181226
 
 ---
 
@@ -27,6 +27,7 @@ jason3e7 20181220
 * [896. Monotonic Array](https://leetcode.com/problems/monotonic-array/)
 * [914. X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/), memory.
 * [941. Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/)
+* [961. N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)
 
 ---
 
