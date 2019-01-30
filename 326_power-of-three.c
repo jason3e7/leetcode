@@ -3,20 +3,14 @@
   * @author Jason3e7
   * @algorithm math
   * @date 20190130
+  * @note max power of 3, 3^19 = 1162261467
   */
 
 #include <stdio.h>
 #include <stdbool.h>
 
 bool isPowerOfThree(int n) {
-	if(n <= 0) {
-		return false;
-	}
-	long temp = 1;
-	while(n > temp) {
-		temp *= 3;
-	}
-	return n == temp;
+	return (n > 0) && (1162261467 % n == 0);
 }
 
 int main() {
