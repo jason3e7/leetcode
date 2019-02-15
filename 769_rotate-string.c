@@ -6,25 +6,28 @@
   */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
 bool rotateString(char* A, char* B) {
-	int aLen = strlen(A), bLen = strlen(B), shift = 0;
+	int aLen = strlen(A), bLen = strlen(B);
 	if(aLen != bLen) {
 		return false;
 	}
 	if(aLen == 0) {
 		return true;
-	}	
-	int p, i, j, check;
-	for(p = 0; p < aLen; p++) {
+	}
+	char* twoA = (char*)malloc(sizeof(char)*(2 * aLen + 1));	
+	int i, j, twoAlen = aLen * 2, check;
+	for(i = 0; i < twoAlen; i++) {
+		twoA[i] = A[i % aLen];
+	}
+	twoA[twoAlen] = '\0';
+	for(i = 0; i < twoAlen; i++) {
 		check = 1;
-		for(i = 0, j = 0 + p; i < aLen; i++, j++) {
-			if(j >= aLen) {
-				j -= aLen;
-			}
-			if(A[i] != B[j]) {
+		for(j = 0; j < bLen; j++) {
+			if(B[j] != twoA[j + i]) {
 				check = 0;
 				break;
 			}
@@ -34,7 +37,6 @@ bool rotateString(char* A, char* B) {
 		}
 	}
     return false;
-
 }
 
 int main() {
