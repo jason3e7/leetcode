@@ -9,21 +9,20 @@
 #include <string.h>
 
 int longestPalindrome(char* s) {
-	int chars[255] = {0}, i, len = strlen(s);
+	int chars[128] = {0}, i, len = strlen(s);
 	for(i = 0; i < len; i++) {
 		chars[s[i]]++;
 	}
-	int odd = 0, mid = 0, count = 0;
-	for(i = 0; i < 255; i++) {
+	int count = 0;
+	for(i = 0; i < 128; i++) {
 		if(chars[i] != 0) {
-			odd = chars[i] % 2;
-			if(mid == 0 && odd == 1) {
-				mid = 1;
-			}
-			count += (chars[i] - odd);
+			count += (chars[i] - (chars[i] % 2));
 		}
 	}
-	return count + mid;
+	if(count != len) {
+		count++;
+	}
+	return count;
 }
 
 int main() {
