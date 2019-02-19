@@ -10,3 +10,5 @@
   * 找出最大差值, 小的要在前面, 程式效率應該是夠好了, 但是系統忙碌所以慢了.
 * \#mtime:20190215, \#rating:60, \#type:c, \#string. [769_rotate-string](769_rotate-string.c)
   * 字串處理, B in A + A, 技術債(Rolling Hash, Knuth-Morris-Pratt).
+* \#mtime:20190219, \#rating:60, \#type:c, \#string. [409_longest-palindrome](409_longest-palindrome.c)
+  * 字串計數, hashmap.
