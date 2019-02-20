@@ -12,3 +12,5 @@
   * 字串處理, B in A + A, 技術債(Rolling Hash, Knuth-Morris-Pratt).
 * \#mtime:20190219, \#rating:60, \#type:c, \#string. [409_longest-palindrome](409_longest-palindrome.c)
   * 字串計數, hashmap, 程式效率應該是夠好了, 但是系統忙碌所以慢了.
+* \#mtime:20190220, \#rating:60, \#type:c, \#math. [507_perfect-number](507_perfect-number.c)
+  * 單純的數學, 可以先算出來用字典法加到最快, 程式效率應該是夠好了, 但是系統忙碌所以慢了.
