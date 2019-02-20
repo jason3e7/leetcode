@@ -9,17 +9,7 @@
 #include <stdbool.h>
 
 bool checkPerfectNumber(int num) {
-	if(num <= 1) {
-		return false;
-	}
-
-	int i, count = 1;
-	for(i = 2; i * i <= num; i++) {
-		if(num % i == 0) {
-			count += (i + (num / i));
-		}
-	}
-	if(count == num) {
+	if(num == 6 || num == 28 || num == 496 || num == 8128 || num == 33550336) {
 		return true;
 	}
 	return false;
