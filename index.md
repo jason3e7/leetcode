@@ -14,3 +14,5 @@
   * 字串計數, hashmap, 程式效率應該是夠好了, 但是系統忙碌所以慢了.
 * \#mtime:20190220, \#rating:60, \#type:c, \#math. [507_perfect-number](507_perfect-number.c)
   * 單純的數學, 可以先算出來用字典法加到最快, 程式效率應該是夠好了, 但是系統忙碌所以慢了.
+* \#mtime:20190221, \#rating:60, \#type:sh, \#shellscript. [195_tenth-line](195_tenth-line.sh)
+  * 單純的shellscript, 主要考字串處理, 通過但是這些指令不熟悉, 要再多學習.
